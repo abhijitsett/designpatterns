@@ -1,0 +1,1 @@
+1. Provides a simplified, unified interface to a complex subsystem of classes, a library, or a framework
