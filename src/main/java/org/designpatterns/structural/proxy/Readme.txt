@@ -1,0 +1,1 @@
+1. a proxy object acts as a substitute or placeholder for another object, controlling access to the original object.
