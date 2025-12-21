@@ -1,4 +1,4 @@
-package org.example;
+package org.designpatterns;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

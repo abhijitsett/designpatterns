@@ -1,2 +1,5 @@
-package org.designpatterns.structural.composite;public interface Component {
+package org.designpatterns.structural.composite;
+
+public interface Component {
+    void showDetails();
 }
