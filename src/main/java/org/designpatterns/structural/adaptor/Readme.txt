@@ -1,0 +1,1 @@
+1. allows objects with incompatible interfaces to work together
