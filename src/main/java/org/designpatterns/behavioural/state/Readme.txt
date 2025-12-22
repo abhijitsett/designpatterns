@@ -1,0 +1,1 @@
+1. a behavioral pattern letting an object change its behavior when its internal state changes
