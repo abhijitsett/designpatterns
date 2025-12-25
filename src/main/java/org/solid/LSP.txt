@@ -1,0 +1,23 @@
+// ❌ Violates LSP: Square inherits Rectangle
+class Rectangle {
+    int width, height;
+    void setWidth(int w){ width=w; }
+    void setHeight(int h){ height=h; }
+    int area(){ return width*height; }
+}
+
+class Square extends Rectangle {
+    void setWidth(int w){ width=height=w; }
+    void setHeight(int h){ width=height=h; }
+}
+
+// ✅ Correct approach
+interface Shape {
+    int area();
+}
+
+class Rectangle implements Shape { /* same as above */ }
+class Square implements Shape {
+    int side;
+    public int area(){ return side*side; }
+}

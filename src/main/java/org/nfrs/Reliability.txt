@@ -1,0 +1,13 @@
+Reliability = system’s ability to perform its intended function consistently, even when faced with errors, failures, or high load.
+
+Reliability Patterns:
+
+| Pattern             | Description                 | Java / Tools Example                 |
+| ------------------- | --------------------------- | ------------------------------------ |
+| **Circuit Breaker** | Stop repeated failing calls | Resilience4j CircuitBreaker          |
+| **Retry**           | Retry transient failures    | Spring Retry, CompletableFuture      |
+| **Bulkhead**        | Isolate failures            | Thread pool per service              |
+| **Failover**        | Switch to standby system    | Database replicas, multiple servers  |
+| **Timeouts**        | Avoid indefinite blocking   | HttpClient timeout, DB query timeout |
+| **Health Checks**   | Monitor components          | Spring Boot Actuator `/health`       |
+

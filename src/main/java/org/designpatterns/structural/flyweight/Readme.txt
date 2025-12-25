@@ -1,0 +1,1 @@
+1. used to minimize memory usage by sharing common state among a large number of similar objects

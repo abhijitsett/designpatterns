@@ -1,0 +1,19 @@
+Summary Checklist for High Availability
+
+ Redundant servers & DB replicas
+
+ Load balancing & auto-scaling
+
+ Stateless services & externalized state
+
+ Failover & hot standby
+
+ Asynchronous processing for decoupling
+
+ Monitoring & alerting
+
+ Disaster recovery and multi-region deployment
+
+ JVM tuning & thread pool management
+
+ Graceful degradation

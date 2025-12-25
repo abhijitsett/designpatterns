@@ -1,0 +1,17 @@
+// ❌ Violates ISP: Bird interface too broad
+interface Bird {
+    void fly();
+    void swim();
+}
+
+class Sparrow implements Bird {
+    public void fly() {}
+    public void swim() {}  // Sparrow doesn’t swim
+}
+
+// ✅ ISP: segregate
+interface Flyable { void fly(); }
+interface Swimmable { void swim(); }
+
+class Sparrow implements Flyable { public void fly() {} }
+class Duck implements Flyable, Swimmable { public void fly(){}; public void swim(){} }

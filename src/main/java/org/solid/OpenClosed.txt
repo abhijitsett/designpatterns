@@ -1,0 +1,26 @@
+// ❌ Violates OCP: need to modify class for new shapes
+class AreaCalculator {
+    double calculateRectangleArea(Rectangle r) { return r.width * r.height; }
+    double calculateCircleArea(Circle c) { return Math.PI * c.radius * c.radius; }
+}
+
+// ✅ OCP: use polymorphism
+interface Shape {
+    double area();
+}
+
+class Rectangle implements Shape {
+    double width, height;
+    public double area() { return width * height; }
+}
+
+class Circle implements Shape {
+    double radius;
+    public double area() { return Math.PI * radius * radius; }
+}
+
+class AreaCalculator {
+    double calculateArea(Shape shape) {
+        return shape.area();
+    }
+}

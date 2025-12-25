@@ -1,0 +1,29 @@
+// ❌ Violates DIP: high-level module depends on concrete class
+class MySQLDatabase {
+    void connect() { System.out.println("Connecting to MySQL"); }
+}
+
+class UserService {
+    MySQLDatabase db = new MySQLDatabase();
+    void saveUser() { db.connect(); }
+}
+
+// ✅ DIP: depend on abstraction
+interface Database {
+    void connect();
+}
+
+class MySQLDatabase implements Database {
+    public void connect() { System.out.println("Connecting to MySQL"); }
+}
+
+class UserService {
+    Database db;  // dependency injected
+    UserService(Database db){ this.db=db; }
+    void saveUser(){ db.connect(); }
+}
+
+// Usage
+Database db = new MySQLDatabase();
+UserService service = new UserService(db);
+service.saveUser();

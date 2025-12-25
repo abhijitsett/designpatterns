@@ -1,0 +1,13 @@
+Fault Tolerance = The ability of a system to continue operating correctly even when some of its components fail.
+
+Fault Tolerance Patterns in Java :
+
+| Pattern                  | Description                                      |
+| ------------------------ | ------------------------------------------------ |
+| **Retry**                | Retry transient errors with backoff              |
+| **Circuit Breaker**      | Stop calling failing service                     |
+| **Bulkhead**             | Isolate failures per service/thread pool         |
+| **Failover**             | Switch to standby system                         |
+| **Timeouts**             | Avoid hanging operations                         |
+| **Graceful Degradation** | Reduce functionality instead of complete failure |
+| **Event-driven queues**  | Buffer requests for retry / delayed processing   |

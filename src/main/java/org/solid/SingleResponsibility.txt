@@ -1,0 +1,23 @@
+// ❌ Violates SRP: handles user data AND email sending
+class User {
+    void saveUser() {
+        // save user to DB
+    }
+
+    void sendEmail() {
+        // send welcome email
+    }
+}
+
+// ✅ SRP: separate responsibilities
+class User {
+    void saveUser() {
+        // save user to DB
+    }
+}
+
+class EmailService {
+    void sendEmail(User user) {
+        // send email
+    }
+}
