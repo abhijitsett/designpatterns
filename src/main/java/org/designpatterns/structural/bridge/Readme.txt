@@ -1,0 +1,1 @@
+separates abstraction from implementation, allowing both to evolve independently.
