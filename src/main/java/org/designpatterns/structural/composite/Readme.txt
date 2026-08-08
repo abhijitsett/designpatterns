@@ -1,5 +1,5 @@
 The Composite Design Pattern is a structural pattern that organizes objects
-into tree structures, allowing clients to treat individual objects and groups of objects uniformly.
+into tree structures to represent part-whole hierarchies, allowing clients to treat individual objects and groups of objects uniformly.
 
 Here These are introductions for the Components of the Composite Design:
 
