@@ -21,3 +21,52 @@ class Square implements Shape {
     int side;
     public int area(){ return side*side; }
 }
+
+
+public class Green {
+   public void getColor() {
+      System.out.println("Green");
+   }
+}
+
+public class Blue extends Green {
+   public void getColor() {
+      System.out.println("Blue");
+   }
+}
+
+public class Main{
+   public static void main(String[] args) {
+      // violate LSP because color of green object is blue
+      Green green = new Blue();
+      green.getColor();
+      //output: Blue
+   }
+}
+
+
+// Solution :
+
+public interface IColor{
+   public void getColor();
+}
+
+public class Green implements IColor {
+   public void getColor() {
+      System.out.println("Green");
+   }
+}
+
+public class Blue implements IColor {
+   public void getColor() {
+      System.out.println("Blue");
+   }
+}
+
+public class Main{
+   public static void main(String[] args) {
+      IColor color = new Blue();
+      color.getColor();
+      //output: Blue
+   }
+}
